@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Aling Nena - Payment Form</title>
+        <link rel = "stylesheet" type = "text/css" href = "/css/style.css"/>
+
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/cover.css">
+	</head>
+    
+    <body>
+        <div class="site-wrapper">
+          <div class="site-wrapper-inner">
+            <div class="cover-container">
+              <div class="masthead clearfix">
+                <div class="inner">
+                  <h3 class="masthead-brand">A.N.</h3>
+                  <ul class="nav masthead-nav">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li class="active"><a href="/products">Products</a></li>
+                  </ul>
+                </div>
+                    <div id ="title">
+                        <img src="/pics/banner.png">
+                    </div>
+            
+                    <div class="Payment">
+                        PAYMENT DENOMINATION: <%= @product.name %> PHP<%= @product.price %> x <%= @qty %>
+                        <form method="POST" action="/payment_form/<%= @product.id %>">
+                            <label>Total amount to be paid: PHP<%= @total_amount %></label>
+                            </br>
+                            <%= @say_someting %>
+                            </br>
+                            <input placeholder="0" class="payment" type="text" name="thousand_bill">
+                            <label>1000 peso bill</label>
+                            </br>
+                            <input placeholder="0" class="payment" type="text" name="five_hundred_bill">
+                            <label>500 peso bill</label>
+                            </br>
+                            <input placeholder="0" class="payment" type="text" name="hundred_bill">
+                            <label>100 peso bill</label>
+                            </br>
+                            <input placeholder="0" class="payment" type="text" name="fifty_bill">
+                            <label>50 peso bill</label>
+                            </br>
+                            <input placeholder="0" class="payment" type="text" name="twenty_bill">
+                            <label>20 peso bill</label>
+                            </br>
+                            <input placeholder="0" class="payment" type="text" name="ten_coin">
+                            <label>10 peso coin</label>
+                            </br>
+                            <input placeholder="0" class="payment" type="text" name="five_coin">
+                            <label>5 peso coin</label>
+                            </br>
+                            <input placeholder="0" class="payment" type="text" name="one_coin">
+                            <label>1 peso coin</label>
+                            </br>
+                            <input class="btn btn-danger btn-lg" type="submit" value="Submit My Payment">
+                            <a href="/quantity/<%= @product.id %>" class="btn btn-primary btn-lg" type="submit">Go Back</a>
+                        </form>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/docs.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Aling Nena - Home</title>
+        <link rel = "stylesheet" type = "text/css" href = "/css/style.css"/>
+
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/cover.css">
+	</head>
+    
+    <body>
+        <div class="site-wrapper">
+          <div class="site-wrapper-inner">
+            <div class="cover-container">
+              <div class="masthead clearfix">
+                <div class="inner">
+                  <h3 class="masthead-brand">A.N.</h3>
+                  <ul class="nav masthead-nav">
+                    <li class="active"><a href="home">Home</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="products">Products</a></li>
+                  </ul>
+                </div>
+                    <div id ="title">
+                        <img src="/pics/banner.png">
+                    </div>
+            
+                    <div class="Random">
+                        "Make the most out of our delicacies!"
+                        </br> </br>
+                        <% if (Item.count == 0)%>
+                        <%= "NO ITEM/S FOR SALE" %>
+                        <% else %>
+                        <% @products.each do |item| %>
+                        <li>
+                            **
+                            <%= item.name %>
+                            **                            
+                        </li>
+                        <% end %>
+                        <% end %>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/docs.min.js"></script>
+	</body>
+</html>

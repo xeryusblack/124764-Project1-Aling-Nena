@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Aling Nena - Payment</title>
+        <link rel = "stylesheet" type = "text/css" href = "/css/style.css"/>
+
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/cover.css">
+	</head>
+    
+    <body>
+        <div class="site-wrapper">
+          <div class="site-wrapper-inner">
+            <div class="cover-container">
+              <div class="masthead clearfix">
+                <div class="inner">
+                  <h3 class="masthead-brand">A.N.</h3>
+                  <ul class="nav masthead-nav">
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li class="active"><a href="/products">Products</a></li>
+                  </ul>
+                </div>
+                    <div id ="title">
+                        <img src="/pics/banner.png">
+                    </div>
+            
+                    <div class="Payment">
+                        CONGRATULATIONS! You have bought <%= @qty %> "<%= @product.name %>"
+                        </br>
+                        Change = PHP<%= @change %> 
+                        </br>
+                        Denomination:
+                        </br>
+                        <input value="<%= @hash['thousands'] %>" class="payment" type="text" readonly>
+                        <label>1000 peso bill</label>
+                        </br>
+                        <input value="<%= @hash['five_hundreds'] %>" class="payment" type="text" readonly>
+                        <label>500 peso bill</label>
+                        </br>
+                        <input value="<%= @hash['hundreds'] %>" class="payment" type="text" readonly>
+                        <label>100 peso bill</label>
+                        </br>
+                        <input value="<%= @hash['fifties'] %>" class="payment" type="text" readonly>
+                        <label>50 peso bill</label>
+                        </br>
+                        <input value="<%= @hash['twenties'] %>" class="payment" type="text" readonly>
+                        <label>20 peso bill</label>
+                        </br>
+                        <input value="<%= @hash['tens'] %>" class="payment" type="text" readonly>
+                        <label>10 peso coin</label>
+                        </br>
+                        <input value="<%= @hash['fives'] %>" class="payment" type="text" readonly>
+                        <label>5 peso coin</label>
+                        </br>
+                        <input value="<%= @hash['ones'] %>" class="payment" type="text" readonly>
+                        <label>1 peso coin</label>
+                        </br></br>
+                        <a href="/products" class="btn btn-danger btn-lg">Back To Products</a>
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <script>
+            function confirm()
+            {
+                alert("Payment Successful! Thank you!");
+            }
+        </script>
+
+        <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="../../dist/js/bootstrap.min.js"></script>
+        <script src="../../assets/js/docs.min.js"></script>
+	</body>
+</html>
